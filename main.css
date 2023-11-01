@@ -5,7 +5,7 @@ body {
 #characterBox {
     margin: auto;
     display: grid;
-    grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
 }
 #weak {
@@ -60,6 +60,22 @@ body {
     justify-content: space-around;
 }
 #jobbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.job {
+    text-align: center;
+    border: 1px solid black;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.job div {
     display: flex;
-    justify-content: space-around;
+    height: 3rem;
+    border: 1px solid red;
+    border-radius: 20%;
+    align-items: center;
+    justify-content: center;
 }
