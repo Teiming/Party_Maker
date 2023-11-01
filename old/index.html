@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <title>스타레일 파티 생성기</title>
+</head>
+<body>
+    <div id="weak">
+        <div id="물리" class="weakness 물리" onclick="selweak('물리')">
+            <img class="image" src="https://rerollcdn.com/STARRAIL/Filters/element_physical.png" alt="물리">
+        </div>
+        <div id="바람" class="weakness 바람" onclick="selweak('바람')">
+            <img class="image" src="https://rerollcdn.com/STARRAIL/Filters/element_wind.png" alt="바람">
+        </div>
+        <div id="번개" class="weakness 번개" onclick="selweak('번개')">
+            <img class="image" src="https://rerollcdn.com/STARRAIL/Filters/element_lightning.png" alt="번개">
+        </div>
+        <div id="양자" class="weakness 양자" onclick="selweak('양자')">
+            <img class="image" src="https://rerollcdn.com/STARRAIL/Filters/element_quantum.png" alt="양자">
+        </div>
+        <div id="얼음" class="weakness 얼음" onclick="selweak('얼음')">
+            <img class="image" src="https://rerollcdn.com/STARRAIL/Filters/element_ice.png" alt="얼음">
+        </div>
+        <div id="허수" class="weakness 허수" onclick="selweak('허수')">
+            <img class="image" src="https://rerollcdn.com/STARRAIL/Filters/element_imaginary.png" alt="허수">
+        </div>
+        <div id="화염" class="weakness 화염" onclick="selweak('화염')">
+            <img class="image" src="https://rerollcdn.com/STARRAIL/Filters/element_fire.png" alt="화염">
+        </div>
+    </div>
+    <h4 id="job_head">
+        <span>힐러<br>풍요</span>
+        <span>딜러<br>수렵/지식/파멸</span>
+        <span>서포터<br>공허/화합</span>
+        <span>탱커<br>보존</span>
+    </h4>
+    <div id="jobbox" style="display: none;">
+        <div id="힐러" class="job"></div>
+        <div id="딜러" class="job"></div>
+        <div id="서포터" class="job"></div>
+        <div id="탱커" class="job"></div>
+    </div>
+    <hr>
+    <article id="party"></article>
+    <div id="log" style="color: red;"></div>
+    <script src="old.js"></script>
+</body>
+</html>
