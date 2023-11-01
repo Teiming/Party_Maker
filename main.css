@@ -1,1 +1,37 @@
-
+body {
+    max-width: 30rem;
+    margin: auto;
+}
+#characterBox {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
+    gap: 1rem;
+}
+.character {
+    display: flex;
+    width: 5rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border: 1pt solid gray;
+    border-radius: 5%;
+}
+.바람 {
+    background-color: palegreen;
+}
+.번개 {
+    background-color: purple;
+}
+.양자 {
+    background-color: violet;
+}
+.얼음 {
+    background-color: skyblue;
+}
+.허수 {
+    background-color: palegoldenrod;
+}
+.화염 {
+    background-color: pink;
+}
