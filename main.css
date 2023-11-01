@@ -8,6 +8,10 @@ body {
     grid-template-columns: 5rem 5rem 5rem 5rem 5rem;
     gap: 1rem;
 }
+#weak {
+    margin: auto;
+    display: flex;
+}
 .character {
     display: flex;
     width: 5rem;
@@ -17,11 +21,23 @@ body {
     border: 1pt solid gray;
     border-radius: 5%;
 }
+.weakness {
+    display: flex;
+    width: 5rem;
+    height: 24pt;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    margin: 6pt;
+}
+.물리 {
+    background-color: lightgray;
+}
 .바람 {
     background-color: palegreen;
 }
 .번개 {
-    background-color: purple;
+    background-color: darkviolet;
 }
 .양자 {
     background-color: violet;
@@ -34,4 +50,9 @@ body {
 }
 .화염 {
     background-color: pink;
+}
+
+#job {
+    display: flex;
+    justify-content: space-around;
 }
