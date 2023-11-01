@@ -7,8 +7,7 @@
     <title>스타레일 파티 생성기</title>
 </head>
 <body>
-    <hr>
-    <div id="characterBox">
+    <div id="characterBox" style="display: none;">
         <div class="character 바람 공허"><span>삼포</span></div>
         <div class="character 얼음 공허"><span>페라</span></div>
         <div class="character 양자 보존"><span>부현</span></div>
@@ -20,7 +19,6 @@
         <div class="character 얼음 파멸"><span>경류</span></div>
         <div class="character 허수 파멸"><span>음월</span></div>
     </div>
-    <hr>
     <h2>약점 선택</h2>
     <div id="weak">
         <div id="물리" class="weakness 물리" onclick="selweak('물리')">
@@ -58,6 +56,9 @@
         <div id="효과" class="job"></div>
         <div id="유지" class="job"></div>
     </div>
+    <hr>
+    <article></article>
+    <hr>
     <div id="log" style="color: red;"></div>
     <script src="main.js"></script>
 </body>

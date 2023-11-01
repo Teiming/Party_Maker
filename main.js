@@ -35,6 +35,33 @@ var character = {
     계네빈: "공허",
   },
 };
+var thumbnail = {
+  Mar7th: 1001,
+  단항: 1002,
+  아스타: 1009,
+  헤르타: 1013,
+  브로냐: 1101,
+  서벌: 1103,
+  게파드: 1104,
+  나타샤: 1105,
+  페라: 1106,
+  삼포: 1108,
+  후크: 1109,
+  청작: 1201,
+  정운: 1202,
+  나찰: 1203,
+  경원: 1204,
+  소상: 1206,
+  어공: 1207,
+  루카: 3000,
+  음월: 3002,
+  부현: 3003,
+  링스: 3004,
+  경류: 3005,
+  토파즈: 3006,
+  계네빈: 3007,
+  불척자: 8003,
+};
 var dealer = document.getElementById("딜러");
 var buffer = document.getElementById("버퍼");
 var effect = document.getElementById("효과");
@@ -46,7 +73,6 @@ for (let i = 0; i < document.getElementsByClassName("weakness").length; i++) {
 
 function selweak(x) {
   var targetweak = document.getElementById(x);
-  console.log(targetweak.style.opacity);
   if (targetweak.style.opacity) {
     targetweak.style.opacity = null;
     jobasg(x);
@@ -55,74 +81,56 @@ function selweak(x) {
     jobdel(x);
   }
 }
-function jobasg(x) {
-  for (let i = 0; i < Object.keys(character[x]).length; i++) {
-    switch (Object.values(character[x])[i]) {
+function jobasg(element) {
+  var nameset = Object.keys(character[element]);
+  for (let i = 0; i < nameset.length; i++) {
+    var name = nameset[i];
+    switch (Object.values(character[element])[i]) {
+      case "수렵":
+      case "지식":
       case "파멸":
         dealer.innerHTML +=
-          "<div id='" +
-          x +
-          i +
-          "'><span>" +
-          Object.keys(character[x])[i] +
-          "</div></div>";
-        break;
-      case "수렵":
-        dealer.innerHTML +=
-          "<div id='" +
-          x +
-          i +
-          "'><span>" +
-          Object.keys(character[x])[i] +
-          "</div></div>";
-        break;
-      case "지식":
-        dealer.innerHTML +=
-          "<div id='" +
-          x +
-          i +
-          "'><span>" +
-          Object.keys(character[x])[i] +
-          "</div></div>";
+          "<div class='" +
+          element +
+          "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
+          thumbnail[name] +
+          '.png"><span>' +
+          name +
+          "</span></div>";
         break;
 
       case "화합":
         buffer.innerHTML +=
-          "<div id='" +
-          x +
-          i +
-          "'><span>" +
-          Object.keys(character[x])[i] +
-          "</div></div>";
+          "<div class='" +
+          element +
+          "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
+          thumbnail[name] +
+          '.png"><span>' +
+          name +
+          "</span></div>";
         break;
 
       case "공허":
         effect.innerHTML +=
-          "<div id='" +
-          x +
-          i +
-          "'><span>" +
-          Object.keys(character[x])[i] +
-          "</div></div>";
+          "<div class='" +
+          element +
+          "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
+          thumbnail[name] +
+          '.png"><span>' +
+          name +
+          "</span></div>";
         break;
 
+      case "보존":
       case "풍요":
         sstain.innerHTML +=
-          "<div id='" +
-          x +
-          i +
-          "'><span>" +
-          Object.keys(character[x])[i] +
-          "</div></div>";
-        break;
-      case "보존":
-        sstain.innerHTML +=
-          "<div id='" +
-          x +
-          i +
-          "'><span>" +
-          Object.keys(character[x])[i] +
-          "</div></div>";
+          "<div class='" +
+          element +
+          "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
+          thumbnail[name] +
+          '.png"><span>' +
+          name +
+          "</span></div>";
         break;
 
       default:
