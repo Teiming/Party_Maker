@@ -35,25 +35,25 @@ body {
     border-radius: 6pt;
     margin: 6pt;
 }
-.물리 {
+.물리, .소상, .루카, .나타샤 {
     background-color: gray;
 }
-.바람 {
+.바람, .브로냐, .단항, .삼포 {
     background-color: palegreen;
 }
-.번개 {
+.번개, .서벌, .정운 {
     background-color: darkviolet;
 }
-.양자 {
+.양자, .부현, .링스, .청작 {
     background-color: darkblue;
 }
-.얼음 {
+.얼음, .경류, .게파드, .페라, .Mar7th, .헤르타 {
     background-color: skyblue;
 }
-.허수 {
+.허수, .음월, .어공 {
     background-color: gold;
 }
-.화염 {
+.화염, .아스타, .계네빈, .후크 {
     background-color: crimson;
 }
 
@@ -74,15 +74,26 @@ body {
 }
 .job div {
     display: flex;
-    height: 5rem;
     margin: 1rem;
     border-radius: 6pt;
     align-items: center;
     justify-content: center;
 }
-.job img {
-    height: 5rem;
+img {
+    height: 6rem;
 }
 .job span {
     display: none;
+}
+
+#party {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#party div {
+    display: flex;
+    margin: 0.5rem;
+    border-radius: 6pt;
+    align-items: center;
+    justify-content: center;
 }

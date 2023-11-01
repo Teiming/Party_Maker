@@ -6,24 +6,24 @@ var character = {
   },
   바람: {
     브로냐: "화합",
-    단항: "수렵",
     삼포: "공허",
+    단항: "수렵",
   },
   번개: {
     서벌: "지식",
     정운: "화합",
   },
   양자: {
-    청작: "지식",
-    링스: "풍요",
     부현: "보존",
+    링스: "풍요",
+    청작: "지식",
   },
   얼음: {
+    경류: "파멸",
     게파드: "보존",
     페라: "공허",
-    경류: "파멸",
-    헤르타: "지식",
     Mar7th: "보존",
+    헤르타: "지식",
   },
   허수: {
     음월: "파멸",
@@ -31,8 +31,8 @@ var character = {
   },
   화염: {
     아스타: "화합",
-    후크: "파멸",
     계네빈: "공허",
+    후크: "파멸",
   },
 };
 var thumbnail = {
@@ -66,6 +66,10 @@ var dealer = document.getElementById("딜러");
 var buffer = document.getElementById("버퍼");
 var effect = document.getElementById("효과");
 var sstain = document.getElementById("유지");
+var dealerarray = [];
+var bufferarray = [];
+var effectarray = [];
+var sstainarray = [];
 
 for (let i = 0; i < document.getElementsByClassName("weakness").length; i++) {
   document.getElementsByClassName("weakness")[i].style.opacity = "20%";
@@ -89,6 +93,8 @@ function jobasg(element) {
       case "수렵":
       case "지식":
       case "파멸":
+        dealerarray.push(name);
+        console.log(dealerarray);
         dealer.innerHTML +=
           "<div class='" +
           element +
@@ -100,6 +106,8 @@ function jobasg(element) {
         break;
 
       case "화합":
+        bufferarray.push(name);
+        console.log(bufferarray);
         buffer.innerHTML +=
           "<div class='" +
           element +
@@ -111,6 +119,8 @@ function jobasg(element) {
         break;
 
       case "공허":
+        effectarray.push(name);
+        console.log(effectarray);
         effect.innerHTML +=
           "<div class='" +
           element +
@@ -123,6 +133,8 @@ function jobasg(element) {
 
       case "보존":
       case "풍요":
+        sstainarray.push(name);
+        console.log(sstainarray);
         sstain.innerHTML +=
           "<div class='" +
           element +
@@ -136,6 +148,39 @@ function jobasg(element) {
       default:
         document.getElementById("log").innerText += "error";
         break;
+    }
+  }
+  document.getElementById("party").innerHTML = null;
+  for (let i = 0; i < sstainarray.length; i++) {
+    for (let j = 0; j < dealerarray.length; j++) {
+      for (let k = 0; k < bufferarray.length; k++) {
+        for (let l = 0; l < effectarray.length; l++) {
+          document.getElementById("party").innerHTML +=
+            '<div class="' +
+            dealerarray[j] +
+            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
+            thumbnail[dealerarray[j]] +
+            '.png"></div>';
+          document.getElementById("party").innerHTML +=
+            '<div class="' +
+            bufferarray[k] +
+            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
+            thumbnail[bufferarray[k]] +
+            '.png"></div>';
+          document.getElementById("party").innerHTML +=
+            '<div class="' +
+            effectarray[l] +
+            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
+            thumbnail[effectarray[l]] +
+            '.png"></div>';
+          document.getElementById("party").innerHTML +=
+            '<div class="' +
+            sstainarray[i] +
+            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
+            thumbnail[sstainarray[i]] +
+            '.png"></div>';
+        }
+      }
     }
   }
 }
