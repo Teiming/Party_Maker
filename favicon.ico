@@ -1,0 +1,39 @@
+var character = [
+    {
+        "물리": [
+            {"나타샤":"풍요"},
+            {"루카":"공허"},
+            {"소상":"수렵"},
+        ]
+    },{
+        "화염": [
+            {"아스타":"화합"},
+            {"후크":"파멸"},
+            {"계네빈":"공허"}
+        ]
+    }
+]
+for (let i = 0; i < document.getElementsByClassName('weakness').length; i++) {
+    document.getElementsByClassName('weakness')[i].style.opacity = "50%";
+};
+
+function selweak(x) {
+    var targetweak = document.getElementById(x);
+    console.log(targetweak.style.opacity);
+    if (targetweak.style.opacity) {
+        targetweak.style.opacity = null;
+        jobasg(x);
+    } else {
+        targetweak.style.opacity = "50%";
+        jobdel(x);
+    }
+}
+function jobasg(x) {
+    for (let index = 0; index < character[Object.keys("물리")].length; index++) {
+        const element = character[Object.keys("물리")][index];
+    }
+}
+function jobdel(x) {
+    
+}
+console.log(Object.keys(character)["물리"]);

@@ -21,17 +21,20 @@ body {
     border: 1pt solid gray;
     border-radius: 5%;
 }
+.image {
+    height: 36pt;
+}
 .weakness {
     display: flex;
     width: 5rem;
-    height: 24pt;
+    height: 3rem;
     justify-content: center;
     align-items: center;
     border-radius: 10%;
     margin: 6pt;
 }
 .물리 {
-    background-color: lightgray;
+    background-color: gray;
 }
 .바람 {
     background-color: palegreen;
@@ -53,6 +56,10 @@ body {
 }
 
 #job {
+    display: flex;
+    justify-content: space-around;
+}
+#jobbox {
     display: flex;
     justify-content: space-around;
 }
