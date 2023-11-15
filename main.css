@@ -1,3 +1,8 @@
+* {
+    font-family: -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 body {
     max-width: 30rem;
     margin: auto;
@@ -43,19 +48,19 @@ body {
 .바람, .브로냐, .단항, .삼포 {
     background-color: palegreen;
 }
-.번개, .서벌, .정운 {
+.번개, .서벌, .정운, .아를란 {
     background-color: darkviolet;
 }
 .양자, .부현, .링스, .청작 {
     background-color: midnightblue;
 }
-.얼음, .경류, .게파드, .페라, .Mar7th, .헤르타 {
+.얼음, .경류, .게파드, .페라, .미츠키, .헤르타 {
     background-color: skyblue;
 }
 .허수, .음월, .어공 {
     background-color: gold;
 }
-.화염, .아스타, .계네빈, .후크 {
+.화염, .아스타, .계네빈, .후크, .불척자 {
     background-color: crimson;
 }
 
