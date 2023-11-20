@@ -1,113 +1,140 @@
 * {
-    font-family: -apple-system, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 body {
-    max-width: 30rem;
-    margin: auto;
-    color: white;
-    background-color: #111;
+  max-width: 30rem;
+  margin: auto;
+  color: white;
+  background-color: #111;
 }
 #characterBox {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
 }
 #weak {
-    margin: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0.5rem;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
 }
 .character {
-    display: flex;
-    width: 5rem;
-    height: 3rem;
-    justify-content: center;
-    align-items: center;
-    border: 1pt solid gray;
-    border-radius: 6pt;
+  display: flex;
+  width: 5rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  border: 1pt solid gray;
+  border-radius: 6pt;
 }
 .image {
-    height: 36pt;
+  height: 36pt;
 }
 .weakness {
-    display: flex;
-    height: 3rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6pt;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6pt;
+  opacity: 0.2;
 }
-.물리, .소상, .루카, .나타샤 {
-    background-color: gray;
+.weakness:hover {
+  opacity: 0.8;
 }
-.바람, .브로냐, .단항, .삼포 {
-    background-color: palegreen;
+.물리,
+.소상,
+.루카,
+.나타샤 {
+  background-color: gray;
 }
-.번개, .서벌, .정운, .아를란 {
-    background-color: darkviolet;
+.바람,
+.브로냐,
+.단항,
+.삼포 {
+  background-color: palegreen;
 }
-.양자, .부현, .링스, .청작 {
-    background-color: midnightblue;
+.번개,
+.서벌,
+.정운,
+.아를란 {
+  background-color: darkviolet;
 }
-.얼음, .경류, .게파드, .페라, .미츠키, .헤르타 {
-    background-color: skyblue;
+.양자,
+.부현,
+.링스,
+.청작 {
+  background-color: midnightblue;
 }
-.허수, .음월, .어공 {
-    background-color: gold;
+.얼음,
+.경류,
+.게파드,
+.페라,
+.미츠키,
+.헤르타 {
+  background-color: skyblue;
 }
-.화염, .아스타, .계네빈, .후크, .불척자 {
-    background-color: crimson;
+.허수,
+.음월,
+.어공 {
+  background-color: gold;
+}
+.화염,
+.아스타,
+.계네빈,
+.후크,
+.불척자 {
+  background-color: crimson;
 }
 
 #job {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 #jobbox {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .job {
-    text-align: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    justify-content: center;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
 }
 .job div {
-    display: flex;
-    margin: 1rem;
-    border-radius: 6pt;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  margin: 1rem;
+  border-radius: 6pt;
+  align-items: center;
+  justify-content: center;
 }
 img {
-    height: 6rem;
+  height: 6rem;
 }
 .job span {
-    display: none;
+  display: none;
 }
 
 #party {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
 }
 #party div {
-    display: flex;
-    border-radius: 6pt;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  border-radius: 6pt;
+  align-items: center;
+  justify-content: center;
 }
-#job_head {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
+.role_header {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
 }
