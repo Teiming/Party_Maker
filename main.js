@@ -7,109 +7,102 @@ var bufferarray = [];
 var effectarray = [];
 var sstainarray = [];
 
-for (let i = 0; i < document.getElementsByClassName("weakness").length; i++) {
-  document.getElementsByClassName("weakness")[i].style.opacity = "20%";
-}
+weakarray = [];
 
 function selweak(x) {
-  var targetweak = document.getElementById(x);
-  if (targetweak.style.opacity) {
-    targetweak.style.opacity = null;
-    jobasg(x);
+  weakarray.push(x);
+  if (weakarray.length > 3) {
+    location.reload();
+  } else if (weakarray.length == 3) {
+    document.getElementById("weak").style.display = "none";
+    roleadd(weakarray);
   } else {
-    targetweak.style.opacity = "20%";
-    jobdel(x);
+    document.getElementById(x).style.display = "none";
   }
 }
-function jobasg(element) {
-  var nameset = Object.keys(character[element]);
-  for (let i = 0; i < nameset.length; i++) {
-    var name = nameset[i];
-    switch (Object.values(character[element])[i]) {
-      case "수렵":
-      case "지식":
-      case "파멸":
-        dealerarray.push(name);
-        console.log(dealerarray);
-        dealer.innerHTML +=
-          "<div class='" +
-          element +
-          "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
-          thumbnail[name] +
-          '.png"><span>' +
-          name +
-          "</span></div>";
-        break;
 
-      case "화합":
-        bufferarray.push(name);
-        console.log(bufferarray);
-        buffer.innerHTML +=
-          "<div class='" +
-          element +
-          "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
-          thumbnail[name] +
-          '.png"><span>' +
-          name +
-          "</span></div>";
-        break;
-
-      case "공허":
-        effectarray.push(name);
-        console.log(effectarray);
-        effect.innerHTML +=
-          "<div class='" +
-          element +
-          "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
-          thumbnail[name] +
-          '.png"><span>' +
-          name +
-          "</span></div>";
-        break;
-
-      case "보존":
-      case "풍요":
-        sstainarray.push(name);
-        console.log(sstainarray);
-        sstain.innerHTML +=
-          "<div class='" +
-          element +
-          "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
-          thumbnail[name] +
-          '.png"><span>' +
-          name +
-          "</span></div>";
-        break;
-
-      default:
-        document.getElementById("log").innerText += "error";
-        break;
+function roleadd(weakarray) {
+  for (let w = 0; w < 3; w++) {
+    var nameset = Object.keys(character[weakarray[w]]);
+    for (let i = 0; i < nameset.length; i++) {
+      var name = nameset[i];
+      switch (Object.values(character[weakarray[w]])[i]) {
+        case "파멸":
+        case "수렵":
+        case "지식":
+          dealerarray.push(name);
+          dealer.innerHTML +=
+            "<div class='" +
+            element +
+            "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
+            thumbnail[name] +
+            '.png"><span>' +
+            name +
+            "</span></div>";
+          break;
+        case "화합":
+          bufferarray.push(name);
+          buffer.innerHTML +=
+            "<div class='" +
+            element +
+            "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
+            thumbnail[name] +
+            '.png"><span>' +
+            name +
+            "</span></div>";
+          break;
+        case "공허":
+          effectarray.push(name);
+          effect.innerHTML +=
+            "<div class='" +
+            element +
+            "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
+            thumbnail[name] +
+            '.png"><span>' +
+            name +
+            "</span></div>";
+          break;
+        case "보존":
+        case "풍요":
+          sstainarray.push(name);
+          sstain.innerHTML +=
+            "<div class='" +
+            element +
+            "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
+            thumbnail[name] +
+            '.png"><span>' +
+            name +
+            "</span></div>";
+          break;
+        default:
+          break;
+      }
     }
   }
-  document.getElementById("party").innerHTML = null;
+  var innerHTML = "";
   for (let i = 0; i < sstainarray.length; i++) {
     for (let j = 0; j < dealerarray.length; j++) {
       for (let k = 0; k < bufferarray.length; k++) {
         for (let l = 0; l < effectarray.length; l++) {
-          document.getElementById("party").innerHTML +=
+          innerHTML +=
             '<div class="' +
             dealerarray[j] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             thumbnail[dealerarray[j]] +
             '.png"></div>';
-          document.getElementById("party").innerHTML +=
+          innerHTML +=
             '<div class="' +
             bufferarray[k] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             thumbnail[bufferarray[k]] +
             '.png"></div>';
-          document.getElementById("party").innerHTML +=
+          innerHTML +=
             '<div class="' +
             effectarray[l] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             thumbnail[effectarray[l]] +
             '.png"></div>';
-          document.getElementById("party").innerHTML +=
+          innerHTML +=
             '<div class="' +
             sstainarray[i] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
@@ -119,7 +112,5 @@ function jobasg(element) {
       }
     }
   }
-}
-function jobdel(x) {
-  location.reload();
+  document.getElementById("party").innerHTML = nuinnerHTMLll;
 }
