@@ -1,27 +1,40 @@
 * {
-  font-family: -apple-system, sans-serif;
+  font-family: "KoreanDREAM5", -apple-system, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
 }
 body {
-  max-width: 30rem;
-  margin: auto;
   color: white;
-  background-color: #111;
+  background-color: black;
 }
-#characterBox {
+main {
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+  padding: 1pt;
+  max-width: 24rem;
 }
-#weak {
+#weakness {
   margin: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.5rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-weakness {
+  display: flex;
+  margin: 0.1rem;
+  min-width: 3rem;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.btn-weakness:hover {
+  opacity: 1;
+}
+.image {
+  height: 3rem;
 }
 .character {
   display: flex;
@@ -31,20 +44,6 @@ body {
   align-items: center;
   border: 1pt solid gray;
   border-radius: 6pt;
-}
-.image {
-  height: 36pt;
-}
-.weakness {
-  display: flex;
-  height: 3rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6pt;
-  opacity: 0.3;
-}
-.weakness:hover {
-  opacity: 1;
 }
 .물리,
 .소상,
@@ -137,6 +136,14 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
+  font-size: 18pt;
+}
+.role_header + .role_header {
+  font-size: 9pt;
+}
+
+#party {
+  opacity: 0;
 }
 
 .switch {
@@ -152,5 +159,5 @@ img {
   align-items: center;
   justify-content: center;
   font-weight: bolder;
-  box-shadow: 0 0 6pt black;
+  box-shadow: 0 0 6pt 1pt black;
 }

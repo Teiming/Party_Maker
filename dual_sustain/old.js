@@ -1,23 +1,20 @@
-var hiller = document.getElementById("힐러");
-var dealer = document.getElementById("딜러");
-var surppt = document.getElementById("서포터");
-var tanker = document.getElementById("탱커");
 var hillerarray = [];
 var dealerarray = [];
 var surpptarray = [];
 var tankerarray = [];
 
-weakarray = [];
+var weakarray = [];
 
 function selweak(x) {
   weakarray.push(x);
   if (weakarray.length > 3) {
     location.reload();
-  } else if (weakarray.length == 3) {
-    document.getElementById("weak").style.display = "none";
-    roleadd(weakarray);
   } else {
     document.getElementById(x).style.display = "none";
+  }
+  if (weakarray.length == 3) {
+    document.getElementById("weakness").style.display = "none";
+    roleadd(weakarray);
   }
 }
 
@@ -27,55 +24,18 @@ function roleadd(weakarray) {
     for (let i = 0; i < nameset.length; i++) {
       var name = nameset[i];
       switch (Object.values(character[weakarray[w]])[i]) {
-        case "파멸":
-        case "수렵":
-        case "지식":
-          dealerarray.push(name);
-          dealer.innerHTML +=
-            "<div class='" +
-            weakarray[w] +
-            "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
-            thumbnail[name] +
-            '.png"><span>' +
-            name +
-            "</span></div>";
-          break;
         case "화합":
         case "공허":
           surpptarray.push(name);
-          surppt.innerHTML +=
-            "<div class='" +
-            weakarray[w] +
-            "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
-            thumbnail[name] +
-            '.png"><span>' +
-            name +
-            "</span></div>";
           break;
-
         case "보존":
           tankerarray.push(name);
-          tanker.innerHTML +=
-            "<div class='" +
-            weakarray[w] +
-            "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
-            thumbnail[name] +
-            '.png"><span>' +
-            name +
-            "</span></div>";
           break;
         case "풍요":
           hillerarray.push(name);
-          hiller.innerHTML +=
-            "<div class='" +
-            weakarray[w] +
-            "'><img src=\"https://rerollcdn.com/STARRAIL/Characters/Thumb/" +
-            thumbnail[name] +
-            '.png"><span>' +
-            name +
-            "</span></div>";
           break;
         default:
+          dealerarray.push(name);
           break;
       }
     }
@@ -113,8 +73,7 @@ function roleadd(weakarray) {
       }
     }
   }
+  document.getElementById("party").style.transition = "0.5s";
+  document.getElementById("party").style.opacity = "1";
   document.getElementById("party").innerHTML = innerHTML;
-}
-function jobdel(x) {
-  location.reload();
 }
