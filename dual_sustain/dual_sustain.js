@@ -1,7 +1,7 @@
-var dealerarray = [];
-var bufferarray = [];
-var effectarray = [];
-var sstainarray = [];
+var hillerSet = {};
+var dealerSet = {};
+var surpptSet = {};
+var tankerSet = {};
 
 var weakarray = [];
 
@@ -20,19 +20,19 @@ function selweak(x) {
 
 function roleadd(weakarray) {
   for (let w = 0; w < 3; w++) {
-    var nameset = Object.keys(character[weakarray[w]]);
+    var nameset = Object.keys(character_tier[weakarray[w]]);
     for (let i = 0; i < nameset.length; i++) {
       var name = nameset[i];
-      switch (Object.values(character[weakarray[w]])[i]) {
+      switch (Object.values(character_tier[weakarray[w]])[i]) {
         case "화합":
-          bufferarray.push(name);
-          break;
         case "공허":
-          effectarray.push(name);
+          surpptarray.push(name);
           break;
         case "보존":
+          tankerarray.push(name);
+          break;
         case "풍요":
-          sstainarray.push(name);
+          hillerarray.push(name);
           break;
         default:
           dealerarray.push(name);
@@ -41,33 +41,33 @@ function roleadd(weakarray) {
     }
   }
   var innerHTML = "";
-  for (let i = 0; i < sstainarray.length; i++) {
-    for (let j = 0; j < dealerarray.length; j++) {
-      for (let k = 0; k < bufferarray.length; k++) {
-        for (let l = 0; l < effectarray.length; l++) {
+  for (let i = 0; i < hillerarray.length; i++) {
+    for (let j = 0; j < tankerarray.length; j++) {
+      for (let k = 0; k < dealerarray.length; k++) {
+        for (let l = 0; l < surpptarray.length; l++) {
           innerHTML +=
             '<div class="' +
-            dealerarray[j] +
-            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
-            thumbnail[dealerarray[j]] +
+            hillerarray[i] +
+            '"><img src="https://rerollcdn.com/STARRAIL/character_tiers/Thumb/' +
+            thumbnail[hillerarray[i]] +
             '.png"></div>';
           innerHTML +=
             '<div class="' +
-            bufferarray[k] +
-            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
-            thumbnail[bufferarray[k]] +
+            dealerarray[k] +
+            '"><img src="https://rerollcdn.com/STARRAIL/character_tiers/Thumb/' +
+            thumbnail[dealerarray[k]] +
             '.png"></div>';
           innerHTML +=
             '<div class="' +
-            effectarray[l] +
-            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
-            thumbnail[effectarray[l]] +
+            surpptarray[l] +
+            '"><img src="https://rerollcdn.com/STARRAIL/character_tiers/Thumb/' +
+            thumbnail[surpptarray[l]] +
             '.png"></div>';
           innerHTML +=
             '<div class="' +
-            sstainarray[i] +
-            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
-            thumbnail[sstainarray[i]] +
+            tankerarray[j] +
+            '"><img src="https://rerollcdn.com/STARRAIL/character_tiers/Thumb/' +
+            thumbnail[tankerarray[j]] +
             '.png"></div>';
         }
       }

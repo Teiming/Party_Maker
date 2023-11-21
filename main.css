@@ -1,5 +1,5 @@
 * {
-  font-family: "KoreanDREAM5", -apple-system, sans-serif;
+  font-family: "KoreanDREAM3", -apple-system, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: content-box;
@@ -10,7 +10,7 @@ body {
 }
 main {
   margin: auto;
-  padding: 1pt;
+  padding: 0.5rem;
   max-width: 24rem;
 }
 #weakness {
@@ -49,87 +49,35 @@ main {
 .소상,
 .루카,
 .나타샤 {
-  background-color: gray;
+  background-color: #979797;
+}
+.화염 {
+  background-color: #ee473d;
+}
+.얼음 {
+  background-color: #2692d3;
+}
+.번개 {
+  background-color: #c65ade;
 }
 .바람,
 .브로냐,
 .단항,
 .삼포 {
-  background-color: palegreen;
-}
-.번개,
-.서벌,
-.정운,
-.아를란 {
-  background-color: darkviolet;
+  background-color: #61cf93;
 }
 .양자,
 .부현,
 .링스,
 .청작 {
-  background-color: midnightblue;
-}
-.얼음,
-.경류,
-.게파드,
-.페라,
-.미츠키,
-.헤르타 {
-  background-color: skyblue;
+  background-color: #7e74eb;
 }
 .허수,
 .음월,
 .어공 {
-  background-color: gold;
-}
-.화염,
-.아스타,
-.계네빈,
-.후크,
-.불척자 {
-  background-color: crimson;
+  background-color: #e6d863;
 }
 
-#job {
-  display: flex;
-  justify-content: space-around;
-}
-#jobbox {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.job {
-  text-align: center;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  justify-content: center;
-}
-.job div {
-  display: flex;
-  margin: 1rem;
-  border-radius: 6pt;
-  align-items: center;
-  justify-content: center;
-}
-img {
-  height: 6rem;
-}
-.job span {
-  display: none;
-}
-
-#party {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-}
-#party div {
-  display: flex;
-  border-radius: 6pt;
-  align-items: center;
-  justify-content: center;
-}
 .role_header {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -142,16 +90,34 @@ img {
   font-size: 9pt;
 }
 
-#party {
+#window_party {
+  display: flex;
+  flex-direction: column;
   opacity: 0;
+}
+.party {
+  display: flex;
+  justify-content: space-around;
+}
+.party div {
+  display: flex;
+  width: 6rem;
+  margin: 0.3rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.party img {
+  height: 5.5rem;
+  border-radius: 0.5rem;
 }
 
 .switch {
-  border-radius: 12pt;
-  position: fixed;
   background-color: #00ff44;
-  color: black;
+  border-radius: 12pt;
   bottom: 1rem;
+  color: black;
+  position: fixed;
   right: 1rem;
   height: 2rem;
   width: 6rem;

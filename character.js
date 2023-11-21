@@ -1,94 +1,149 @@
-var character_tier = [
-  {
-    부현: {
-      element: 양자,
-      path: 보존,
-      thumbnail: 3003,
-    },
+var character_tier = {
+  부현: {
+    tier: 0,
+    element: "양자",
+    path: "보존",
+    thumbnail: 3003,
   },
-  {
-    경류: {
-      element: 얼음,
-      path: 파멸,
-      thumbnail: 3005,
-    },
+  경류: {
+    tier: 0,
+    element: "얼음",
+    path: "파멸",
+    thumbnail: 3005,
   },
-  {
-    음월: {
-      element: 허수,
-      path: 파멸,
-      thumbnail: 3002,
-    },
+  음월: {
+    tier: 0,
+    element: "허수",
+    path: "파멸",
+    thumbnail: 3002,
   },
-  {
-    브로냐: {
-      element: 바람,
-      path: 화합,
-      thumbnail: 1101,
-    },
+  브로냐: {
+    tier: 0,
+    element: "바람",
+    path: "화합",
+    thumbnail: 1101,
   },
-];
-// 물리: {
-//   나타샤: "풍요",
-//   루카: "공허",
-//   소상: "수렵",
-// },
-// 화염: {
-//   계네빈: "공허",
-//   아스타: "화합",
-//   불척자: "보존",
-//   후크: "파멸",
-// },
-// 얼음: {
-//   경류: "파멸",
-//   게파드: "보존",
-//   페라: "공허",
-//   미츠키: "보존",
-//   헤르타: "지식",
-// },
-// 바람: {
-//   삼포: "공허",
-//   단항: "수렵",
-// },
-// 번개: {
-//   정운: "화합",
-//   서벌: "지식",
-//   아를란: "파멸",
-// },
-// 양자: {
-//   부현: "보존",
-//   링스: "풍요",
-//   청작: "지식",
-// },
-// 허수: {
-//   음월: "파멸",
-//   어공: "화합",
-// },
+  게파드: {
+    tier: 3,
+    element: "얼음",
+    path: "보존",
+    thumbnail: 1104,
+  },
+  링스: {
+    tier: 3,
+    element: "양자",
+    path: "풍요",
+    thumbnail: 3004,
+  },
+  정운: {
+    tier: 3,
+    element: "번개",
+    path: "화합",
+    thumbnail: 1202,
+  },
+  페라: {
+    tier: 4,
+    element: "얼음",
+    path: "공허",
+    thumbnail: 1106,
+  },
+  아스타: {
+    tier: 6,
+    element: "화염",
+    path: "화합",
+    thumbnail: 1009,
+  },
+  계네빈: {
+    tier: 6,
+    element: "화염",
+    path: "공허",
+    thumbnail: 3007,
+  },
+  불척자: {
+    tier: 9,
+    element: "화염",
+    path: "보존",
+    thumbnail: 8003,
+  },
+  청작: {
+    tier: 9,
+    element: "양자",
+    path: "지식",
+    thumbnail: 1201,
+  },
+  어공: {
+    tier: 9,
+    element: "허수",
+    path: "화합",
+    thumbnail: 1207,
+  },
+  루카: {
+    tier: 11,
+    element: "물리",
+    path: "공허",
+    thumbnail: 3000,
+  },
+  미츠키: {
+    tier: 12,
+    element: "얼음",
+    path: "보존",
+    thumbnail: 1001,
+  },
+  나타샤: {
+    tier: 12,
+    element: "물리",
+    path: "풍요",
+    thumbnail: 1105,
+  },
+  헤르타: {
+    tier: 12,
+    element: "얼음",
+    path: "지식",
+    thumbnail: 1013,
+  },
+  후크: {
+    tier: 12,
+    element: "화염",
+    path: "파멸",
+    thumbnail: 1109,
+  },
+  서벌: {
+    tier: 12,
+    element: "번개",
+    path: "지식",
+    thumbnail: 1103,
+  },
+  삼포: {
+    tier: 12,
+    element: "바람",
+    path: "공허",
+    thumbnail: 1108,
+  },
+  단항: {
+    tier: 12,
+    element: "바람",
+    path: "수렵",
+    thumbnail: 1002,
+  },
+  소상: {
+    tier: 13,
+    element: "물리",
+    path: "수렵",
+    thumbnail: 1206,
+  },
+  아를란: {
+    tier: 15,
+    element: "번개",
+    path: "파멸",
+    thumbnail: 1008,
+  },
+};
 
 var thumbnail = {
-  미츠키: 1001,
-  단항: 1002,
   히메코: 1003,
   웰트: 1004,
   카프카: 1005,
-  아를란: 1008,
-  아스타: 1009,
-  헤르타: 1013,
-  서벌: 1103,
-  게파드: 1104,
-  나타샤: 1105,
-  페라: 1106,
-  삼포: 1108,
-  후크: 1109,
-  청작: 1201,
-  정운: 1202,
   나찰: 1203,
   경원: 1204,
-  소상: 1206,
-  어공: 1207,
-  루카: 3000,
-  링스: 3004,
   토파즈: 3006,
-  계네빈: 3007,
-  불척자: 8003,
 };
