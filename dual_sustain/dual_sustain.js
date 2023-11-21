@@ -1,9 +1,5 @@
-var hillerSet = {};
-var dealerSet = {};
-var surpptSet = {};
-var tankerSet = {};
-
 var weakarray = [];
+var innerHTML = "";
 
 function selweak(x) {
   weakarray.push(x);
@@ -18,62 +14,85 @@ function selweak(x) {
   }
 }
 
+var hillerSet = {};
+var tankerSet = {};
+var dealerSet = {};
+var surpptSet = {};
+
 function roleadd(weakarray) {
-  for (let w = 0; w < 3; w++) {
-    var nameset = Object.keys(character_tier[weakarray[w]]);
-    for (let i = 0; i < nameset.length; i++) {
-      var name = nameset[i];
-      switch (Object.values(character_tier[weakarray[w]])[i]) {
-        case "화합":
-        case "공허":
-          surpptarray.push(name);
-          break;
-        case "보존":
-          tankerarray.push(name);
-          break;
-        case "풍요":
-          hillerarray.push(name);
-          break;
-        default:
-          dealerarray.push(name);
-          break;
-      }
-    }
-  }
-  var innerHTML = "";
-  for (let i = 0; i < hillerarray.length; i++) {
-    for (let j = 0; j < tankerarray.length; j++) {
-      for (let k = 0; k < dealerarray.length; k++) {
-        for (let l = 0; l < surpptarray.length; l++) {
-          innerHTML +=
-            '<div class="' +
-            hillerarray[i] +
-            '"><img src="https://rerollcdn.com/STARRAIL/character_tiers/Thumb/' +
-            thumbnail[hillerarray[i]] +
-            '.png"></div>';
-          innerHTML +=
-            '<div class="' +
-            dealerarray[k] +
-            '"><img src="https://rerollcdn.com/STARRAIL/character_tiers/Thumb/' +
-            thumbnail[dealerarray[k]] +
-            '.png"></div>';
-          innerHTML +=
-            '<div class="' +
-            surpptarray[l] +
-            '"><img src="https://rerollcdn.com/STARRAIL/character_tiers/Thumb/' +
-            thumbnail[surpptarray[l]] +
-            '.png"></div>';
-          innerHTML +=
-            '<div class="' +
-            tankerarray[j] +
-            '"><img src="https://rerollcdn.com/STARRAIL/character_tiers/Thumb/' +
-            thumbnail[tankerarray[j]] +
-            '.png"></div>';
+  for (let i = 0; i < Object.keys(character_tier).length; i++) {
+    character_name = Object.keys(character_tier)[i];
+    character_path = character_tier[character_name]["path"];
+    character_elem = character_tier[character_name]["element"];
+    for (let i = 0; i < weakarray.length; i++) {
+      if (character_elem == weakarray[i]) {
+        switch (character_path) {
+          case "화합":
+          case "공허":
+            surpptSet[character_name] = Object.values(
+              character_tier[character_name]
+            );
+            break;
+          case "보존":
+            tankerSet[character_name] = Object.values(
+              character_tier[character_name]
+            );
+            break;
+          case "풍요":
+            hillerSet[character_name] = Object.values(
+              character_tier[character_name]
+            );
+            break;
+          default:
+            dealerSet[character_name] = Object.values(
+              character_tier[character_name]
+            );
+            break;
         }
       }
     }
   }
-  document.getElementById("party").style.transition = "0.5s";
-  document.getElementById("party").style.opacity = "1";
-  document.getElementById("party").innerHTML = innerHTML;
+
+  for (let i = 0; i < Object.keys(hillerSet).length; i++) {
+    for (let j = 0; j < Object.keys(tankerSet).length; j++) {
+      for (let k = 0; k < Object.keys(dealerSet).length; k++) {
+        for (let l = 0; l < Object.keys(surpptSet).length; l++) {
+          party_order =
+            Object.values(hillerSet)[i][0] +
+            Object.values(tankerSet)[j][0] +
+            Object.values(dealerSet)[k][0] +
+            Object.values(surpptSet)[l][0];
+          innerHTML += "<div class='party' style='order: " + party_order + "'>";
+          innerHTML +=
+            '<div class="' +
+            Object.values(hillerSet)[i][1] +
+            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
+            Object.values(hillerSet)[i][3] +
+            '.png"></div>';
+          innerHTML +=
+            '<div class="' +
+            Object.values(dealerSet)[k][1] +
+            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
+            Object.values(dealerSet)[k][3] +
+            '.png"></div>';
+          innerHTML +=
+            '<div class="' +
+            Object.values(surpptSet)[l][1] +
+            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
+            Object.values(surpptSet)[l][3] +
+            '.png"></div>';
+          innerHTML +=
+            '<div class="' +
+            Object.values(tankerSet)[j][1] +
+            '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
+            Object.values(tankerSet)[j][3] +
+            '.png"></div>';
+          innerHTML += "</div>";
+        }
+      }
+    }
+  }
+  document.getElementById("window_party").style.transition = "0.5s";
+  document.getElementById("window_party").style.opacity = "1";
+  document.getElementById("window_party").innerHTML = innerHTML;
 }

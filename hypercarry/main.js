@@ -57,19 +57,12 @@ function roleadd(weakarray) {
     for (let j = 0; j < Object.keys(arrayForDealer).length; j++) {
       for (let k = 0; k < Object.keys(arrayForBuffer).length; k++) {
         for (let l = 0; l < Object.keys(arrayForDebuffer).length; l++) {
-          party_id = "party-" + i + j + k + l;
           party_order =
             Object.values(arrayForDealer)[j][0] +
             Object.values(arrayForBuffer)[k][0] +
             Object.values(arrayForDebuffer)[l][0] +
             Object.values(arrayForSustain)[i][0];
-          console.log(party_id);
-          innerHTML +=
-            "<div class='party' id='" +
-            party_id +
-            "' style='order:" +
-            party_order +
-            "'>";
+          innerHTML += "<div class='party' style='order: " + party_order + "'>";
           innerHTML +=
             '<div class="' +
             Object.values(arrayForDealer)[j][1] +
