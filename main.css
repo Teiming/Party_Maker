@@ -13,27 +13,20 @@ main {
   padding: 0.5rem;
   max-width: 24rem;
 }
-#weakness {
-  margin: auto;
-  margin: 0.5rem;
-  display: flex;
-  justify-content: space-around;
-}
 .btn-weakness {
   display: flex;
-  margin: 0.1rem;
+  margin: 0.2rem;
   min-width: 3rem;
   width: 5rem;
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
   opacity: 0.4;
-  transition: 0.5s;
 }
 .btn-weakness:hover {
   opacity: 1;
 }
-.image {
+.element-logo {
   height: 3rem;
 }
 .character {
@@ -45,10 +38,7 @@ main {
   border: 1pt solid gray;
   border-radius: 6pt;
 }
-.물리,
-.소상,
-.루카,
-.나타샤 {
+.물리 {
   background-color: #979797;
 }
 .화염 {
@@ -60,21 +50,13 @@ main {
 .번개 {
   background-color: #c65ade;
 }
-.바람,
-.브로냐,
-.단항,
-.삼포 {
+.바람 {
   background-color: #61cf93;
 }
-.양자,
-.부현,
-.링스,
-.청작 {
+.양자 {
   background-color: #7e74eb;
 }
-.허수,
-.음월,
-.어공 {
+.허수 {
   background-color: #e6d863;
 }
 
@@ -112,15 +94,39 @@ main {
   border-radius: 0.5rem;
 }
 
-.switch {
-  background-color: #00ff44;
-  border-radius: 12pt;
-  bottom: 1rem;
-  color: black;
+.floater {
   position: fixed;
-  right: 1rem;
-  height: 2rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+
+  min-width: 24rem;
+  margin: 0;
+}
+#weakness {
+  max-width: 24rem;
+  margin: auto;
+  padding: 0.2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+.switch {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+
+  border-radius: 1rem;
+
   width: 6rem;
+  height: 2rem;
+  color: var(--theme-color-text);
+  background-color: var(--theme-color);
+
   display: flex;
   align-items: center;
   justify-content: center;

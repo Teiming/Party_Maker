@@ -53,6 +53,10 @@ function roleadd(weakarray) {
     }
   }
 
+  if (arrayForSustain || arrayForDealer || arrayForBuffer || arrayForDebuffer) {
+    location.reload();
+  }
+
   for (let i = 0; i < Object.keys(arrayForSustain).length; i++) {
     for (let j = 0; j < Object.keys(arrayForDealer).length; j++) {
       for (let k = 0; k < Object.keys(arrayForBuffer).length; k++) {
