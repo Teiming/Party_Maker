@@ -53,7 +53,12 @@ function roleadd(weakarray) {
     }
   }
 
-  if (Object.keys(hillerSet).length || tankerSet || dealerSet || surpptSet) {
+  if (
+    !Object.keys(hillerSet).length ||
+    !Object.keys(tankerSet).length ||
+    !Object.keys(dealerSet).length ||
+    !Object.keys(surpptSet).length
+  ) {
     location.reload();
   }
 

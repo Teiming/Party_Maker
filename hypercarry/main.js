@@ -53,7 +53,12 @@ function roleadd(weakarray) {
     }
   }
 
-  if (arrayForSustain || arrayForDealer || arrayForBuffer || arrayForDebuffer) {
+  if (
+    !Object.keys(arrayForSustain).length ||
+    !Object.keys(arrayForDealer).length ||
+    !Object.keys(arrayForBuffer).length ||
+    !Object.keys(arrayForDebuffer).length
+  ) {
     location.reload();
   }
 
