@@ -1,33 +1,52 @@
 * {
-  font-family: "KoreanDREAM3", -apple-system, sans-serif;
+  font-family: a드림고딕, -apple-system, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
+
+  line-height: 100%;
 }
+*[data-element="물리"] {
+  background-color: #979797;
+}
+*[data-element="화염"] {
+  background-color: #ee473d;
+}
+*[data-element="얼음"] {
+  background-color: #2692d3;
+}
+*[data-element="번개"] {
+  background-color: #c65ade;
+}
+*[data-element="바람"] {
+  background-color: #61cf93;
+}
+*[data-element="양자"] {
+  background-color: #7e74eb;
+}
+*[data-element="허수"] {
+  background-color: #e6d863;
+}
+
 body {
-  color: white;
+  margin: auto;
+
+  max-width: 24rem;
+
   background-color: black;
+
+  color: white;
+}
+header {
+  position: sticky;
+  top: 0;
+  padding: 0.3rem;
+  background-color: black;
+  box-shadow: 0rem 0.2rem 0.5rem black;
 }
 main {
   margin: auto;
-  padding: 0.5rem;
-  max-width: 24rem;
-}
-.btn-weakness {
-  display: flex;
-  margin: 0.2rem;
-  min-width: 3rem;
-  width: 5rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  opacity: 0.4;
-}
-.btn-weakness:hover {
-  opacity: 1;
-}
-.element-logo {
-  height: 3rem;
+  padding: 0.3rem;
 }
 .character {
   display: flex;
@@ -35,29 +54,8 @@ main {
   height: 3rem;
   justify-content: center;
   align-items: center;
-  border: 1pt solid gray;
-  border-radius: 6pt;
-}
-.물리 {
-  background-color: #979797;
-}
-.화염 {
-  background-color: #ee473d;
-}
-.얼음 {
-  background-color: #2692d3;
-}
-.번개 {
-  background-color: #c65ade;
-}
-.바람 {
-  background-color: #61cf93;
-}
-.양자 {
-  background-color: #7e74eb;
-}
-.허수 {
-  background-color: #e6d863;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
 }
 
 .role_header {
@@ -66,10 +64,10 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  font-size: 18pt;
+  font-size: 1.5rem;
 }
-.role_header + .role_header {
-  font-size: 9pt;
+.role_header_sub {
+  font-size: 0.75rem;
 }
 
 #window_party {
@@ -115,6 +113,23 @@ main {
   display: flex;
   justify-content: space-between;
 }
+.btn-weakness {
+  display: flex;
+  margin: 0.2rem;
+  min-width: 3rem;
+  width: 5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  opacity: 0.4;
+}
+.btn-weakness:hover {
+  opacity: 1;
+}
+.btn-weakness .element-logo {
+  height: 3rem;
+}
+
 .switch {
   margin-right: 1rem;
   margin-bottom: 1rem;
@@ -122,14 +137,18 @@ main {
 
   border-radius: 1rem;
 
-  width: 6rem;
   height: 2rem;
+
+  padding: 1rem;
+  padding-top: 1.1rem;
+  padding-bottom: 0.9rem;
+
   color: var(--theme-color-text);
   background-color: var(--theme-color);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bolder;
-  box-shadow: 0 0 6pt 1pt black;
+  font-weight: bold;
+  box-shadow: 0 0 0.5rem 0.1rem black;
 }
