@@ -1,4 +1,10 @@
 var character_tier = {
+  곽향: {
+    tier: 0,
+    element: "바람",
+    path: "풍요",
+    thumbnail: 3008,
+  },
   부현: {
     tier: 0,
     element: "양자",
@@ -146,4 +152,6 @@ var thumbnail = {
   나찰: 1203,
   경원: 1204,
   토파즈: 3006,
+  아젠티: 3009,
+  한아: 3010,
 };
