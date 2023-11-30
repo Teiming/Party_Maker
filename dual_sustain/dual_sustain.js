@@ -73,25 +73,25 @@ function roleadd(weakarray) {
             Object.values(surpptSet)[l][0];
           innerHTML += "<div class='party' style='order: " + party_order + "'>";
           innerHTML +=
-            '<div class="' +
+            '<div data-element="' +
             Object.values(hillerSet)[i][1] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             Object.values(hillerSet)[i][3] +
             '.png"></div>';
           innerHTML +=
-            '<div class="' +
+            '<div data-element="' +
             Object.values(dealerSet)[k][1] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             Object.values(dealerSet)[k][3] +
             '.png"></div>';
           innerHTML +=
-            '<div class="' +
+            '<div data-element="' +
             Object.values(surpptSet)[l][1] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             Object.values(surpptSet)[l][3] +
             '.png"></div>';
           innerHTML +=
-            '<div class="' +
+            '<div data-element="' +
             Object.values(tankerSet)[j][1] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             Object.values(tankerSet)[j][3] +
