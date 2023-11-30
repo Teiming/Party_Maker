@@ -73,25 +73,25 @@ function roleadd(weakarray) {
             Object.values(arrayForSustain)[i][0];
           innerHTML += "<div class='party' style='order: " + party_order + "'>";
           innerHTML +=
-            '<div class="' +
+            '<div data-element="' +
             Object.values(arrayForDealer)[j][1] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             Object.values(arrayForDealer)[j][3] +
             '.png"></div>';
           innerHTML +=
-            '<div class="' +
+            '<div data-element="' +
             Object.values(arrayForBuffer)[k][1] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             Object.values(arrayForBuffer)[k][3] +
             '.png"></div>';
           innerHTML +=
-            '<div class="' +
+            '<div data-element="' +
             Object.values(arrayForDebuffer)[l][1] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             Object.values(arrayForDebuffer)[l][3] +
             '.png"></div>';
           innerHTML +=
-            '<div class="' +
+            '<div data-element="' +
             Object.values(arrayForSustain)[i][1] +
             '"><img src="https://rerollcdn.com/STARRAIL/Characters/Thumb/' +
             Object.values(arrayForSustain)[i][3] +
