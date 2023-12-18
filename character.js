@@ -17,17 +17,23 @@ var character_tier = {
     path: "파멸",
     thumbnail: 3005,
   },
-  음월: {
-    tier: 0,
-    element: "허수",
-    path: "파멸",
-    thumbnail: 3002,
-  },
   브로냐: {
     tier: 0,
     element: "바람",
     path: "화합",
     thumbnail: 1101,
+  },
+  은랑: {
+    tier: 1,
+    element: "양자",
+    path: "공허",
+    thumbnail: 1006,
+  },
+  링스: {
+    tier: 3,
+    element: "양자",
+    path: "풍요",
+    thumbnail: 3004,
   },
   게파드: {
     tier: 3,
@@ -35,11 +41,11 @@ var character_tier = {
     path: "보존",
     thumbnail: 1104,
   },
-  링스: {
+  음월: {
     tier: 3,
-    element: "양자",
-    path: "풍요",
-    thumbnail: 3004,
+    element: "허수",
+    path: "파멸",
+    thumbnail: 3002,
   },
   정운: {
     tier: 3,
@@ -58,6 +64,12 @@ var character_tier = {
     element: "화염",
     path: "화합",
     thumbnail: 1009,
+  },
+  한아: {
+    tier: 6,
+    element: "물리",
+    path: "화합",
+    thumbnail: 3010,
   },
   계네빈: {
     tier: 6,
@@ -83,17 +95,17 @@ var character_tier = {
     path: "화합",
     thumbnail: 1207,
   },
+  헤르타: {
+    tier: 11,
+    element: "얼음",
+    path: "지식",
+    thumbnail: 1013,
+  },
   루카: {
     tier: 11,
     element: "물리",
     path: "공허",
     thumbnail: 3000,
-  },
-  미츠키: {
-    tier: 12,
-    element: "얼음",
-    path: "보존",
-    thumbnail: 1001,
   },
   나타샤: {
     tier: 12,
@@ -101,17 +113,17 @@ var character_tier = {
     path: "풍요",
     thumbnail: 1105,
   },
-  헤르타: {
+  미츠키: {
     tier: 12,
     element: "얼음",
-    path: "지식",
-    thumbnail: 1013,
+    path: "보존",
+    thumbnail: 1001,
   },
-  후크: {
+  단항: {
     tier: 12,
-    element: "화염",
-    path: "파멸",
-    thumbnail: 1109,
+    element: "바람",
+    path: "수렵",
+    thumbnail: 1002,
   },
   서벌: {
     tier: 12,
@@ -119,17 +131,17 @@ var character_tier = {
     path: "지식",
     thumbnail: 1103,
   },
+  후크: {
+    tier: 12,
+    element: "화염",
+    path: "파멸",
+    thumbnail: 1109,
+  },
   삼포: {
     tier: 12,
     element: "바람",
     path: "공허",
     thumbnail: 1108,
-  },
-  단항: {
-    tier: 12,
-    element: "바람",
-    path: "수렵",
-    thumbnail: 1002,
   },
   소상: {
     tier: 13,
@@ -153,5 +165,4 @@ var thumbnail = {
   경원: 1204,
   토파즈: 3006,
   아젠티: 3009,
-  한아: 3010,
 };
